@@ -1,9 +1,10 @@
 import React from "react";
+import { CSSObject } from '@emotion/react'
 
-type ImgProps = JSX.IntrinsicElements['img']
+type ImgProps = JSX.IntrinsicElements['img'] & CSSObject
 
-export const Image: React.FC<ImgProps> = (props) => {
+export const Image: React.FC<ImgProps> = ({ css, ...props }) => {
     return (
-        <img {...props} />
+        <img css={css} {...props} />
     );
 };
