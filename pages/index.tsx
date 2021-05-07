@@ -1,11 +1,10 @@
-import { Footer } from '../components/footer';
-import { Header } from '../components/header';
+import Layout from '../components/layout/layout';
 import React from "react";
 
 export const Home = () => {
   return <>
-    <Header></Header>
-    <Footer></Footer>
+    <Layout>
+    </Layout>
   </>
 }
 
