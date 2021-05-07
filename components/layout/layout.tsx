@@ -1,5 +1,4 @@
-import { Footer } from '../footer';
-import { Header } from '../header';
+import { Header, Footer } from '../../components';
 import React from "react";
 
 export const Layout: React.FC = ({ children }) => {
