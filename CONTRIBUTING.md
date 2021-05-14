@@ -55,7 +55,7 @@
 1. 必要に応じてSSGのための処理を記述する
     ```ts
     import { API } from '../util/api';
-    import CMSResult from '../util/cmsResult';
+    import {CMSResult} from '../util/cmsResult';
 
     interface Person extends CMSResult {
         name: string
