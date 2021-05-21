@@ -17,7 +17,8 @@ export const Information: React.FC<InformationProps> = ({ contents }: Informatio
     return <Container>
         <h1 css={{ textAlign: 'center' }}>お知らせ</h1>
         {contents.map((article: Article) =>
-            <li css={{
+            <li key={article.id}
+                css={{
                 listStyleType: 'none',
                 marginBottom: '40px'
             }}>
