@@ -6,13 +6,14 @@ import { MenuProps } from './elements/menus';
 
 const logoCss = css`
     width: 80px;
-    padding: 4px 4px 4px 10px;
+    padding: 2px 4px 4px 10px;
     position: absolute;
 `
 const Logo = () => <Image css={logoCss} src="logo.png"></Image>
 
 const headerCss = css`
     height: 80px;
+    padding-top: 4px;
 `
 
 const menuProps: MenuProps = {
@@ -41,7 +42,7 @@ export const Header = () => {
                 <Col sm={4}>
                     <Row noGutters css={{flexDirection: 'column'}}>
                         <Row>パンくずリスト</Row>
-                        <Row justify={'center'} align={'center'} noGutters>
+                        <Row justify={'center'} align={'center'} css={{ lineHeight: 1.4 }} noGutters>
                             <Menus {...menuProps}></Menus>
                         </Row>
                     </Row>

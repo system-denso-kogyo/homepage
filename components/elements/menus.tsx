@@ -11,19 +11,20 @@ export interface MenuProps {
     menus: Menu[]
 }
 
-const menuCss = css`
+const menuCss = (active: boolean) => css`
     text-align: center;
     padding-left: 6px;
     padding-right: 6px;
     margin-top: 10px;
+    ${active ? `border-bottom: 2px #cd2b62 solid`: ''}
 `
 
 export const Menus: React.FC<MenuProps> = ({ menus }: MenuProps) => 
     <>
         {menus.map(({ name, path }) =>
-            <div css={menuCss}>
+            <div css={menuCss(true)}>
                 <Link href={path}>
-                    <a>{name}</a>
+                    <a css={{ fontWeight: 'bold', fontSize: '1.2em'}}>{name}</a>
                 </Link>
             </div>
         )}
