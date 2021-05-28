@@ -19,9 +19,9 @@ const Article: React.FC<ArticleProps> = ({ imageName, title, description, path }
             fontSize: '1.3rem',
             lineHeight: '1.2',
             overflow: "hidden",
-            marginBottom: '4px'
+            marginBottom: '8px'
         }}>{description}</p>
-        <Link href={path}><a>詳しく見る</a></Link>
+        <Link href={path}><a css={{ fontWeight: "bold" }}>詳しく見る</a></Link>
     </>
 
 export interface AboutProps {
