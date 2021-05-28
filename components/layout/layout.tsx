@@ -4,7 +4,7 @@ import React from "react";
 export const Layout: React.FC = ({ children }) => {
     return <>
         <Header></Header>
-        <main>{children}</main>
+        <main css={{ marginBottom: '100px' }}>{children}</main>
         <Footer></Footer>
     </>
 }
