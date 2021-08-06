@@ -10,6 +10,8 @@ export interface RecruitProps {
     construct: ArticleProps
 }
 
+const offset = { xs: 0.5, sm: 0.5, md: 0.5, xl: 0.5, lg: 0.5 }
+
 export const RecruitArea: React.FC<RecruitProps> = ({ recruit, system, construct }) =>
     <Container fluid css={{ marginTop: '80px' }}>
         <h1 css={{ textAlign: "center" }}>採用情報について</h1>
@@ -18,7 +20,7 @@ export const RecruitArea: React.FC<RecruitProps> = ({ recruit, system, construct
             <Col sm={3}>
                 <Image width={'100%'} src={recruit.imageName}></Image>
             </Col>
-            <Col sm={3} offset={{ sm: 0.5 }}>
+            <Col sm={3} offset={offset}>
                 <Description {...recruit.description}></Description>
             </Col>
         </Row>
@@ -28,7 +30,7 @@ export const RecruitArea: React.FC<RecruitProps> = ({ recruit, system, construct
                 <Article {...system}></Article>
             </Col>
             {/* construct */}
-            <Col sm={3} offset={{ sm: 0.5 }}>
+            <Col sm={3} offset={offset}>
                 <Article {...construct}></Article>
             </Col>
         </Row>
