@@ -8,7 +8,8 @@ interface Menu {
 }
 
 export interface MenuProps {
-    menus: Menu[]
+    menus: Menu[],
+    currentPathName: string
 }
 
 const menuCss = (active: boolean) => css`
@@ -16,15 +17,15 @@ const menuCss = (active: boolean) => css`
     padding-left: 6px;
     padding-right: 6px;
     margin-top: 10px;
-    ${active ? `border-bottom: 2px #cd2b62 solid`: ''}
+    ${active ? `border-bottom: 2px #cd2b62 solid` : ''}
 `
 
-export const Menus: React.FC<MenuProps> = ({ menus }: MenuProps) => 
+export const Menus: React.FC<MenuProps> = ({ menus, currentPathName }: MenuProps) =>
     <>
         {menus.map(({ name, path }) =>
-            <div css={menuCss(true)}>
+            <div css={menuCss(currentPathName === '/' || path === currentPathName)}>
                 <Link href={path}>
-                    <a css={{ fontWeight: 'bold', fontSize: '1.2em'}}>{name}</a>
+                    <a css={{ fontWeight: 'bold', fontSize: '1.2em', cursor: 'pointer' }}>{name}</a>
                 </Link>
             </div>
         )}

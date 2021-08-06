@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import { Container, Row, Col } from '@mverissimoo/emotion-grid';
 import Link from 'next/link';
 import { MenuProps } from './elements/menus';
+import { useRouter } from 'next/router';
 
 const logoCss = css`
     width: 80px;
@@ -20,18 +21,19 @@ const headerCss = css`
     border-bottom: 1px solid #457b9d;
 `
 
-const menuProps: MenuProps = {
-    menus: [
-        { name: '企業理念', path: '/' },
-        { name: '企業情報', path: '/' },
-        { name: '採用情報', path: '/' },
-        { name: 'アクセス', path: '/' },
-        { name: 'お問合せ', path: '/' },
-        { name: '事業内容', path: '/' }
-    ]
-}
+const menus = [
+    { name: '企業理念', path: '/' },
+    { name: '企業情報', path: '/' },
+    { name: '採用情報', path: '/' },
+    { name: 'アクセス', path: '/' },
+    { name: 'お問合せ', path: '/' },
+    { name: '事業内容', path: '/' }
+]
 
 export const Header = () => {
+    const router = useRouter();
+    // 現在のパス
+    const pathName = router.pathname ?? '';
     return (
         <Container css={headerCss} fluid>
             <Row>
@@ -47,7 +49,7 @@ export const Header = () => {
                     <Row noGutters css={{ flexDirection: 'column' }}>
                         <Row>パンくずリスト</Row>
                         <Row justify={'center'} align={'center'} css={{ lineHeight: 1.4 }} noGutters>
-                            <Menus {...menuProps}></Menus>
+                            <Menus menus={menus} currentPathName={pathName}></Menus>
                         </Row>
                     </Row>
                 </Col>
