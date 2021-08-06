@@ -4,7 +4,13 @@ import React from "react";
 export const Layout: React.FC = ({ children }) => {
     return <>
         <Header></Header>
-        <main css={{ marginBottom: '100px' }}>{children}</main>
+        <main css={{
+            marginBottom: '100px',
+            top: '80px',
+            position: 'relative'
+        }}>
+            {children}
+        </main>
         <Footer {...{
             linksProps: {
                 blocks: [
