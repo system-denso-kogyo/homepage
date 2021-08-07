@@ -16,5 +16,5 @@ export const Description: React.FC<DescriptionProps> = ({ title, description, pa
             marginTop: '8px',
             marginBottom: '8px',
         }}>{description}</p>
-        {path !== undefined && <Link href={path}><a css={{ fontWeight: "bold" }}>詳しく見る</a></Link>}
+        {path !== undefined && <Link href={path}><a css={{ fontWeight: "bold", cursor: 'pointer' }}>詳しく見る</a></Link>}
     </>
