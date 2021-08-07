@@ -1,6 +1,5 @@
 import Layout from '../components/layout/layout';
-import { Title, OverviewArea } from '../components';
-import { MapArea } from '../components/mapArea';
+import { Title, OverviewArea, MapArea, HistoryArea } from '../components';
 
 export const Home = () =>
     <Layout>
@@ -62,6 +61,89 @@ export const Home = () =>
                 imageName: 'profile/Photo.png'
             }
         }}></MapArea>
+        <HistoryArea {...{
+            history: [
+                {
+                    year: '19XX年',
+                    body: [
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。'
+                        },
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二'
+                        },
+                    ]
+                },
+                {
+                    year: '19XX年',
+                    body: [
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。'
+                        },
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二'
+                        },
+                    ]
+                },
+                {
+                    year: '19XX年',
+                    body: [
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。'
+                        },
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二'
+                        },
+                    ]
+                },
+                {
+                    year: '20XX年',
+                    body: [
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。'
+                        },
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二'
+                        },
+                    ]
+                },
+                {
+                    year: '20XX年',
+                    body: [
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。'
+                        },
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二'
+                        },
+                    ]
+                },
+                {
+                    year: '20XX年',
+                    body: [
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。'
+                        },
+                        {
+                            month: 'XX月',
+                            text: '親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二'
+                        },
+                    ]
+                },
+            ]
+        }}>
+        </HistoryArea>
     </Layout >
 
 export default Home;

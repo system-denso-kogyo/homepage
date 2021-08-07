@@ -11,3 +11,5 @@ export { Title } from './elements/title';
 export { OverviewArea } from './overviewArea';
 export { SubTitle } from './elements/subTitle';
 export { CompanyMap } from './elements/companyMap';
+export { MapArea } from './mapArea';
+export { HistoryArea } from './historyArea';

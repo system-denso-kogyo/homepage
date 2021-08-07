@@ -13,7 +13,7 @@ export interface MapProps {
 export const MapArea: React.FC<MapProps> = ({ map }) => (
     <Container fluid css={{ marginTop: "40px" }}>
         <SubTitle text={"アクセスマップ"}></SubTitle>
-        <Container css={{ fontSize: "1.4rem", color: "#707F89" }}>
+        <Container css={{ fontSize: "1.4rem", color: "#707F89", marginTop: '60px' }}>
             <Row justify={"center"} css={{ marginTop: "16px" }}>
                 <Col sm={1}>{"所在地"}</Col>
                 <Col sm={3} css={{ whiteSpace: "pre-line" }}>
