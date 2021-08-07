@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from '@mverissimoo/emotion-grid';
-import { Article, ArticleProps } from "./elements/article";
+import { SubTitle } from "./elements/subTitle";
+
 
 export interface OverviewProps {
     overview: { title: string, description: string }[]
@@ -8,7 +9,7 @@ export interface OverviewProps {
 
 export const OverviewArea: React.FC<OverviewProps> = ({ overview }) =>
     <Container fluid css={{ marginTop: '40px' }}>
-        <h1 css={{ textAlign: "center", color: '#457B9D' }}>企業概要</h1>
+    <SubTitle text={'企業概要'}></SubTitle>
         <Container css={{ fontSize: '1.4rem', color: '#707F89' }}>
             {overview.map(({ title, description }) =>
                 <Row justify={"center"} css={{ marginTop: '16px' }}>

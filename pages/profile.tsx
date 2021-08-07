@@ -1,5 +1,6 @@
 import Layout from '../components/layout/layout';
 import { Title, OverviewArea } from '../components';
+import { MapArea } from '../components/mapArea';
 
 export const Home = () =>
     <Layout>
@@ -53,6 +54,14 @@ export const Home = () =>
                 }
             ]
         }}></OverviewArea>
+        <MapArea {...{
+            map: {
+                address: '〒110-0012　東京都台東区竜泉1-9-2',
+                nearestStation: `営団日比谷線　入谷駅3番出口徒歩3分
+                JR山手線　鶯谷駅南口徒歩15分`,
+                imageName: 'profile/Photo.png'
+            }
+        }}></MapArea>
     </Layout >
 
 export default Home;

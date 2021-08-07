@@ -1,5 +1,5 @@
 import React from "react";
-import { Interpolation, Theme, CSSObject } from '@emotion/react';
+import { CSSObject } from '@emotion/react';
 
 export interface TitleProps {
     css?: CSSObject,

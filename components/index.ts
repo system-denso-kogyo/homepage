@@ -9,3 +9,5 @@ export { AboutArea } from './aboutArea';
 export { BusinessArea } from './businessArea';
 export { Title } from './elements/title';
 export { OverviewArea } from './overviewArea';
+export { SubTitle } from './elements/subTitle';
+export { CompanyMap } from './elements/companyMap';
