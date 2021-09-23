@@ -7,3 +7,4 @@ export { Layout } from "./layout/layout";
 export { Menus } from './elements/menus';
 export { AboutArea } from './aboutArea';
 export { BusinessArea } from './businessArea';
+export {IntroductionArea} from './introductionArea';
