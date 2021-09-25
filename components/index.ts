@@ -8,3 +8,6 @@ export { Menus } from './elements/menus';
 export { AboutArea } from './aboutArea';
 export { BusinessArea } from './businessArea';
 export {IntroductionArea} from './introductionArea';
+export {EquipmentArea} from './equipmentArea';
+export {SystemArea} from './systemArea';
+
