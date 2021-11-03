@@ -17,7 +17,7 @@ export const Layout: React.FC = ({ children }) => {
                     {
                         name: '企業情報',
                         links: [
-                            { name: '企業情報', path: '' },
+                            { name: '企業情報', path: '/profile' },
                             { name: '企業理念', path: '/company' },
                             { name: '社長あいさつ', path: '' },
                             { name: '事業内容', path: '' },

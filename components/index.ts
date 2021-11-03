@@ -19,3 +19,7 @@ export { PhilosophyArea } from './PhilosophyArea';
 export {IntroductionArea} from './introductionArea';
 export {EquipmentArea} from './equipmentArea';
 export {SystemArea} from './systemArea';
+export { OverviewArea } from './overviewArea';
+export { CompanyMap } from './elements/companyMap';
+export { MapArea } from './mapArea';
+export { HistoryArea } from './historyArea';

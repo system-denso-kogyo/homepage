@@ -23,7 +23,7 @@ const headerCss = css`
 
 const menus = [
     { name: '企業理念', path: '/company' },
-    { name: '企業情報', path: '/' },
+    { name: '企業情報', path: '/profile' },
     { name: '採用情報', path: '/' },
     { name: 'アクセス', path: '/' },
     { name: 'お問合せ', path: '/' },
