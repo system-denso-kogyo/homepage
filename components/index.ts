@@ -15,3 +15,4 @@ export { RecruitSystemMidwaytArea } from './recruitSystemMidwaytArea';
 export { RecruitEequipmentInfoArea } from './recruitEequipmentInfoArea';
 export { RecruitEequipmentNewGraduateArea } from './recruitEequipmentNewGraduateArea';
 export { RecruitEequipmentMidwayArea } from './recruitEequipmentMidwayArea';
+export { PhilosophyArea } from './PhilosophyArea';
