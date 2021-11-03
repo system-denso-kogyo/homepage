@@ -16,3 +16,6 @@ export { RecruitEequipmentInfoArea } from './recruitEequipmentInfoArea';
 export { RecruitEequipmentNewGraduateArea } from './recruitEequipmentNewGraduateArea';
 export { RecruitEequipmentMidwayArea } from './recruitEequipmentMidwayArea';
 export { PhilosophyArea } from './PhilosophyArea';
+export {IntroductionArea} from './introductionArea';
+export {EquipmentArea} from './equipmentArea';
+export {SystemArea} from './systemArea';
