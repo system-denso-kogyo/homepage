@@ -4,7 +4,13 @@ import { RecruitArea } from '../components/recruitArea';
 
 export const Home = () =>
     <Layout>
-        <VideoArea>
+        <VideoArea {...{
+            videos: [
+                'top/sdk_pr_top.mp4',
+                'top/sdk_pr_system.mp4',
+                'top/sdk_pr_equipment.mp4'
+            ]
+        }}>
             <div css={{
                 position: 'absolute',
                 bottom: 0,
