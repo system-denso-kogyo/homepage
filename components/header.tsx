@@ -47,7 +47,6 @@ export const Header = () => {
                 </Col>
                 <Col sm={4}>
                     <Row noGutters css={{ flexDirection: 'column' }}>
-                        <Row>パンくずリスト</Row>
                         <Row justify={'center'} align={'center'} css={{ lineHeight: 1.4 }} noGutters>
                             <Menus menus={menus} currentPathName={pathName}></Menus>
                         </Row>
