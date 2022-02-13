@@ -22,18 +22,19 @@ const headerCss = css`
 `
 
 const menus = [
-    { name: '企業理念', path: '/company' },
-    { name: '企業情報', path: '/profile' },
-    { name: '採用情報', path: '/#recruitArea' },
-    { name: 'アクセス', path: '/' },
+    { name: '企業理念', path: '/company#' },
+    { name: '企業情報', path: '/profile#' },
+    { name: '採用情報', path: '/#recruitArea#' },
+    { name: 'アクセス', path: '/profile#map' },
     { name: 'お問合せ', path: '/' },
-    { name: '事業内容', path: '/business' }
+    { name: '事業内容', path: '/business#' }
 ]
 
 export const Header = () => {
     const router = useRouter();
     // 現在のパス
-    const pathName = router.pathname ?? '';
+    console.log(router);
+    const pathName = router.asPath ?? '';
     return (
         <Container css={headerCss} fluid>
             <Row>
