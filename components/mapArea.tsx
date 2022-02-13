@@ -11,7 +11,7 @@ export interface MapProps {
 }
 
 export const MapArea: React.FC<MapProps> = ({ map }) => (
-    <Container fluid css={{ marginTop: "40px" }}>
+    <Container fluid css={{ marginTop: "40px" }} id="map">
         <SubTitle text={"アクセスマップ"}></SubTitle>
         <Container css={{ fontSize: "1.4rem", color: "#707F89", marginTop: '60px' }}>
             <Row justify={"center"} css={{ marginTop: "16px" }}>
