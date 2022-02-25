@@ -28,31 +28,16 @@ export const Home = () =>
                     description: "親譲りの無鉄砲で小供の時から損ばかりしている。",
                 }
             },
-            Arrow: {
-                description: {
-                    title: "▷"
-                }
-            },
             RecruitmentFlow3: {
                 description: {
                     title: "フロー3",
                     description: "親譲りの無鉄砲で小供の時から損ばかりしている。",
                 }
             },
-            Arrow: {
-                description: {
-                    title: "▷"
-                }
-            },
             RecruitmentFlow4: {
                 description: {
                     title: "フロー4",
                     description: "親譲りの無鉄砲で小供の時から損ばかりしている。",
-                }
-            },
-            Arrow: {
-                description: {
-                    title: "▷"
                 }
             }
         }
