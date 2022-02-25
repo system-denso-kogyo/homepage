@@ -14,7 +14,7 @@ export const SystemArea: React.FC<SystemProps> = ({ introduction, achievements }
     <Container fluid css={{
         marginTop: '80px',
         paddingBottom: '20px'
-    }}>
+    }} id="system">
         <h1 css={{ textAlign: "left" }}>システム部</h1>
         <Row justify={"center"} css={{ marginTop: '40px' }}>
             <Col sm={3}>

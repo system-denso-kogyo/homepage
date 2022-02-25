@@ -6,9 +6,18 @@ export const Home = () =>
     <Layout>
         <VideoArea {...{
             videos: [
-                'top/sdk_pr_top.mp4',
-                'top/sdk_pr_system.mp4',
-                'top/sdk_pr_equipment.mp4'
+                {
+                    source: 'top/sdk_pr_top.mp4',
+                    destination: '/'
+                },
+                {
+                    source: 'top/sdk_pr_system.mp4',
+                    destination: 'business#system'
+                },
+                {
+                    source: 'top/sdk_pr_equipment.mp4',
+                    destination: 'business#equipment'
+                }
             ]
         }}>
             <div css={{

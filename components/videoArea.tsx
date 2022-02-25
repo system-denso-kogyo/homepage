@@ -29,7 +29,10 @@ var carouselSettings: Settings = {
 };
 
 export interface VideoAreaProps {
-    videos: string[]
+    videos: {
+        source: string
+        destination: string
+    }[]
 }
 
 export const VideoArea: React.FC<VideoAreaProps> = ({ videos, children }) => {
@@ -62,9 +65,11 @@ export const VideoArea: React.FC<VideoAreaProps> = ({ videos, children }) => {
                     startVideo(refs[0].current);
                 }
             }}>
-                {videos.map((uri, i) =>
+                {videos.map((v, i) =>
                     <div css={{ textAlign: "center" }}>
-                        <Video src={uri} loop={true} autoPlay={true} muted={true} ref={refs[i]}></Video>
+                        <a href={v.destination} css={{ display: "block" }}>
+                            <Video src={v.source} loop={true} autoPlay={true} muted={true} ref={refs[i]}></Video>
+                        </a>
                     </div>
                 )}
             </Carousel>

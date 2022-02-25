@@ -10,7 +10,7 @@ export const EquipmentArea: React.FC<SystemProps> = ({ introduction, achievement
         marginTop: '80px',
         borderBottom: '1px solid #457b9d',
         paddingBottom: '40px'
-    }}>
+    }} id="equipment">
         <h1 css={{ textAlign: "left" }}>設備工事部</h1>
         <Row justify={"center"} css={{ marginTop: '40px' }}>
             <Col sm={3}>
