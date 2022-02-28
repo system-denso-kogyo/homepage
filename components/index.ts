@@ -10,4 +10,5 @@ export { BusinessArea } from './businessArea';
 export {IntroductionArea} from './introductionArea';
 export {EquipmentArea} from './equipmentArea';
 export {SystemArea} from './systemArea';
-
+export { Title } from './elements/title';
+export { PhilosophyArea } from './PhilosophyArea';
