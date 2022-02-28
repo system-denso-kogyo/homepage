@@ -1,0 +1,41 @@
+on:
+  push:
+    branches:    
+      - 'main'
+name: 🚀 Deploy HP by FTP on push to main
+jobs:
+  ftp-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+      - name: 😺 Setup Yarn
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - run: npm install -g yarn
+      - name: 😼 Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - uses: actions/cache@v2
+        if: ${{ !env.ACT }}
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: 👷 Install if no cache
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install --immutable
+      - name: 🔨 Build HP
+        run: yarn build
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: /httpdocs/next/    # TODO: next/は本番リリースが可能になったら消す
