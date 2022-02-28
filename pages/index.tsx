@@ -67,7 +67,7 @@ export const Home = () =>
                     description: {
                         title: "わが社のモットー",
                         description: "親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな",
-                        path: ""
+                        path: "company"
                     }
                 },
                 {

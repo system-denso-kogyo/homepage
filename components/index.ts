@@ -13,3 +13,7 @@ export { SubTitle } from './elements/subTitle';
 export { CompanyMap } from './elements/companyMap';
 export { MapArea } from './mapArea';
 export { HistoryArea } from './historyArea';
+export {IntroductionArea} from './introductionArea';
+export {EquipmentArea} from './equipmentArea';
+export {SystemArea} from './systemArea';
+export { PhilosophyArea } from './PhilosophyArea';
