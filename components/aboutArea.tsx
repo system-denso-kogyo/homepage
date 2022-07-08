@@ -8,7 +8,7 @@ export interface AboutProps {
 
 export const AboutArea: React.FC<AboutProps> = ({ articles }) =>
     <Container fluid css={{ marginTop: '80px' }}>
-        <h1 css={{ textAlign: "center" }}>システム電装工業株式会社について</h1>
+        <h1 css={{ textAlign: "center" }}>歴史と未来　 History　＆　Future</h1>
         <Row justify={"center"} css={{ marginTop: '40px' }}>
             {articles.map((article) =>
                 <Col sm={2.5}>
