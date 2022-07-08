@@ -82,7 +82,7 @@ export const Home = () =>
                     description: {
                         title: "会社の未来　The future of the company",
                         description: "　ＳＤＫは情報技術と設備工事で人々の生活をあらゆる面でより良い方向に変化させることを目指します。そのために今を第二創業期として位置付け変化に対応する企業から変化を起こす企業へと生まれ変わります。",
-                        path: "company"
+                        path: "/company"
                     }
                 },
                 {
@@ -90,7 +90,7 @@ export const Home = () =>
                     description: {
                         title: "わが社の情報",
                         description: "親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな",
-                        path: "profile"
+                        path: "/profile"
                     }
                 },
             ]
