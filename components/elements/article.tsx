@@ -3,8 +3,8 @@ import { Image } from "../image";
 import { Description, DescriptionProps } from "./description";
 
 export interface ArticleProps {
-    description: DescriptionProps
-    imageName: string
+    description?: DescriptionProps
+    imageName?: string
 }
 
 export const Article: React.FC<ArticleProps> = ({ description, imageName }) =>

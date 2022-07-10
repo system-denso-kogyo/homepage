@@ -14,7 +14,7 @@ const offset = { xs: 0.5, sm: 0.5, md: 0.5, xl: 0.5, lg: 0.5 }
 
 export const RecruitArea: React.FC<RecruitProps> = ({ recruit, system, construct }) =>
     <Container fluid css={{ marginTop: '80px' }}>
-        <h1 css={{ textAlign: "center" }}>採用情報について</h1>
+        <h1 id="recruitArea"  css={{ textAlign: "center" }}>採用情報について</h1>
         {/* recruit */}
         <Row justify={"center"} css={{ marginTop: '40px' }}>
             <Col sm={3}>

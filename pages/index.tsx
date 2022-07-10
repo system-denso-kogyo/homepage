@@ -4,7 +4,22 @@ import { RecruitArea } from '../components/recruitArea';
 
 export const Home = () =>
     <Layout>
-        <VideoArea>
+        <VideoArea {...{
+            videos: [
+                {
+                    source: 'top/sdk_pr_top.mp4',
+                    destination: '/'
+                },
+                {
+                    source: 'top/sdk_pr_system.mp4',
+                    destination: 'business#system'
+                },
+                {
+                    source: 'top/sdk_pr_equipment.mp4',
+                    destination: 'business#equipment'
+                }
+            ]
+        }}>
             <div css={{
                 position: 'absolute',
                 bottom: 0,
@@ -57,17 +72,17 @@ export const Home = () =>
                 {
                     imageName: "top/Photo.png",
                     description: {
-                        title: "うちのおやじ",
-                        description: "親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな",
+                        title: "会社の歴史　Company history",
+                        description: "　当社は１９８２年２月に東京都に工事業者として開業しました。その後はシステム開発事業を新設し他社との差別化を図ってまいりました。工事部門は各種システムや制御装置の据え付けなどのほか、プラントの設計・施工に関する諸工事を行ってきました。また、システム開発部門は各産業分野の多様なニーズに対応し、システム化の調査・開発を一貫して行ってきました。",
                         path: ""
                     }
                 },
                 {
                     imageName: "top/Photo-1.png",
                     description: {
-                        title: "わが社のモットー",
-                        description: "親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな",
-                        path: "company"
+                        title: "会社の未来　The future of the company",
+                        description: "　ＳＤＫは情報技術と設備工事で人々の生活をあらゆる面でより良い方向に変化させることを目指します。そのために今を第二創業期として位置付け変化に対応する企業から変化を起こす企業へと生まれ変わります。",
+                        path: "/company"
                     }
                 },
                 {
@@ -75,7 +90,7 @@ export const Home = () =>
                     description: {
                         title: "わが社の情報",
                         description: "親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな",
-                        path: "profile"
+                        path: "/profile"
                     }
                 },
             ]
@@ -91,10 +106,33 @@ export const Home = () =>
                 }
             },
             construct: {
-                imageName: "top/Photo-4.png",
+                imageName: "top/equipment1.jpg",
                 description: {
-                    title: "設備工事をする",
-                    description: "親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫",
+                    title: `設備工事事業
+                    Equipment construction business`,
+                    description: `各種システムや制御装置の据え付けなどのほか、プラントの設計・施工に関する諸工事を行います。
+                    １　システム工事
+                    　　スタジオ・入退館・防犯等の特殊設備の設計・施工を行います。
+                    　　・音響スタジオ工事　大学、企業内のスタジオ工事（ラック・機器・施工）
+                    　　・入退館管理システム工事　事業所内入退館システムの施工
+                    　　・防犯システム工事　監視カメラによる防犯システムの施工
+                    
+                    ２　ＬＡＮ工事
+                    　　部材・機器の調達及び配線図面作成並びに、ＬＡＮ配線工事、Ｗｉｆｉ工事を行います。
+                    　　構内全体、ビル内、事務所内等の規模に拘らず工事を行います。
+                    
+                    ３　電気工事
+                    　　事務所内及び一般店舗の電気工事を行います。
+                    　　・ＯＡフロアー施工（図面作成・機器調達・施工）
+                    　　・電源コンセント、照明他、電気工事
+                    
+                    ４　空調設備工事
+                    　　電算室・事務所内・ビル内空調設備施工（図面、機材調達、施工）工事を行います。
+                    
+                    ５　ＡＩカメラの代理店
+                    　　兼松サステック株式会社様と協同でＡＩカメラの代理店を行っています。
+                    　　兼松サステック株式会社様はHanwha Techwinの日本正規総代理店として国内に年間約4000件の導入実績があります。
+                    　　・アパート・飲食チェーン・信用金庫・カラオケ・銀行等`,
                     path: ""
                 }
             }
@@ -113,7 +151,7 @@ export const Home = () =>
                 description: {
                     title: "システム事業",
                     description: "親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出して",
-                    path: ""
+                    path: "/recruit-system"
                 }
             },
             construct: {
@@ -121,7 +159,7 @@ export const Home = () =>
                 description: {
                     title: "工事事業",
                     description: "親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出して",
-                    path: ""
+                    path: "/recruit-equipment"
                 }
             }
         }

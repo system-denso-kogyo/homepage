@@ -26,7 +26,7 @@ export const BusinessArea: React.FC<BusinessProps> = ({ system, construct }) =>
             <Col sm={3}>
                 <Image width={'100%'} src={construct.imageName}></Image>
             </Col>
-            <Col sm={3} offset={offset}>
+            <Col sm={3} offset={offset} css={{ whiteSpace: 'pre-line' }}>
                 <Description {...construct.description}></Description>
             </Col>
         </Row>

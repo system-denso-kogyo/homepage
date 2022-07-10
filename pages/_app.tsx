@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import { ScrollToTop } from '../components/scrollToTop'
 import '../styles/globals.css'
 
 /**
@@ -13,7 +14,10 @@ function SafeHydrate({ children }) {
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <SafeHydrate><Component {...pageProps} /></SafeHydrate>
+  return <SafeHydrate>
+    <ScrollToTop />
+    <Component {...pageProps} />
+  </SafeHydrate>
 }
 
 export default MyApp

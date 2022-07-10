@@ -2,8 +2,8 @@ import React from "react";
 import Link from 'next/link';
 
 export interface DescriptionProps {
-    title: string
-    description: string
+    title?: string
+    description?: string
     path?: string
 }
 
