@@ -2,33 +2,38 @@
 
 ## 目次
 
-
 ## 準備
+
 ### 必要なツール
+
 - [git](https://git-scm.com/downloads)
 - [Yarn](https://classic.yarnpkg.com/en/docs/install#windows-stable)
+- [act](https://github.com/nektos/act)
 
 ### 開発準備
+
 1. プロジェクトをクローン
-    ```
-    git clone https://github.com/system-denso-kogyo/homepage.git
-    ```
+   ```sh
+   git clone https://github.com/system-denso-kogyo/homepage.git
+   ```
 1. クローンしたプロジェクトのディレクトリへ移動
-    ```
-    cd homepage
-    ```
+   ```sh
+   cd homepage
+   ```
 1. 依存関係のインストール
-    ```
-    yarn install
-    ```
+   ```sh
+   yarn install
+   ```
 1. 実行
-    ```
-    yarn dev
-    ```
-    http://localhost:3000 でアクセス
+   ```sh
+   yarn dev
+   ```
+   http://localhost:3000 でアクセス
 
 ## 開発
+
 ### ディレクトリ構造
+
 ```
 .
 ├── components/     // コンポーネントファイルを配置する
@@ -48,63 +53,110 @@
 ```
 
 ### ページについて
+
 - 全てのページは`pages/`に置く必要がある
 - ページは`layout.tsx`をテンプレートとして使用する
-- next.jsは`pages/`配下のファイルを元にルーティングを自動的に関連付けられる
+- next.js は`pages/`配下のファイルを元にルーティングを自動的に関連付けられる
 - ページの識別子は拡張子を除いたファイル名であり、大文字小文字が区別される
+
 #### ページの作成
+
 1. `pages/`配下に`小文字ページ名.tsx`ファイルを作成する
-1. ページをTSX（TypeScriptのJSX）形式で記述する
+1. ページを TSX（TypeScript の JSX）形式で記述する
 1. ページは`components/layout/layout.tsx`で定義されている`<Layout></Layout>`でラップする
-1. 必要に応じてSSGのための処理を記述する
-    ```ts
-    import { API } from '../util/api';
-    import {CMSResult} from '../util/cmsResult';
+1. 必要に応じて SSG のための処理を記述する
 
-    interface Person extends CMSResult {
-        name: string
-    }
+   ```ts
+   import { API } from "../util/api";
+   import { CMSResult } from "../util/cmsResult";
 
-    export const PersonPage: React.FC<Person> = ({name}) => 
-        <Layout>
-            <span>{ name }</span>
-        </Layout>
+   interface Person extends CMSResult {
+     name: string;
+   }
 
-    /**
-     * SSGを行うための関数
-     * Next.jsは、この関数がページに存在する場合に、ビルド時に自動的にレンダリングを行う
-     * https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation
-     * 
-     * @param context 
-     * @returns 
-     */
-    export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
-        // APIからデータ取得
-        const data = await API.get<Person>('...');
+   export const PersonPage: React.FC<Person> = ({ name }) => (
+     <Layout>
+       <span>{name}</span>
+     </Layout>
+   );
 
-        // ページにデータを連携する
-        return {
-            props: data
-        };
-    }
-    ```
+   /**
+    * SSGを行うための関数
+    * Next.jsは、この関数がページに存在する場合に、ビルド時に自動的にレンダリングを行う
+    * https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation
+    *
+    * @param context
+    * @returns
+    */
+   export const getStaticProps: GetStaticProps = async (
+     context: GetStaticPropsContext
+   ) => {
+     // APIからデータ取得
+     const data = await API.get<Person>("...");
 
-### CSSについて
-- CSSの選択肢は以下の二つ
-    - 通常のCSSファイル、`styles`配下に配置する
-    - [Emotion](https://emotion.sh/docs/introduction)という`CSSinJS`ライブラリの
+     // ページにデータを連携する
+     return {
+       props: data,
+     };
+   };
+   ```
 
-#### CSSの場合
+### CSS について
+
+- CSS の選択肢は以下の二つ
+  - 通常の CSS ファイル、`styles`配下に配置する
+  - [Emotion](https://emotion.sh/docs/introduction)という`CSSinJS`ライブラリの
+
+#### CSS の場合
+
 - コンポーネント単位のスタイリングを行うには、`コンポーネント名.module.css`というファイル名で作成する
-https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css
+  https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css
 
-#### Emotionの場合
-- `CSSinJS`は、JavaScript内にCSSを記述する
-- `Emotion`は`css`` `形式のタグ付きテンプレートを提供おり、このテンプレート中にCSSを記述する
-https://emotion.sh/docs/introduction
+#### Emotion の場合
 
+- `CSSinJS`は、JavaScript 内に CSS を記述する
+- `Emotion`は` css``  `形式のタグ付きテンプレートを提供おり、このテンプレート中に CSS を記述する
+  https://emotion.sh/docs/introduction
 
-### pages/_app.tsxについて
-- Next.jsはすべてのページにおいて、ページを初期化するためにAppコンポーネントを使用している
-- pages/_app.tsxファイルでAppコンポーネントをオーバーライドすることで、ページの初期化をコントロールできる
+### pages/\_app.tsx について
+
+- Next.js はすべてのページにおいて、ページを初期化するために App コンポーネントを使用している
+- pages/\_app.tsx ファイルで App コンポーネントをオーバーライドすることで、ページの初期化をコントロールできる
 - 全ページ共通の処理は`_app.tsx`に書く
+
+## CI/CD
+
+- **原則手動デプロイは行わない**
+- CI/CD は GitHub Actions で実施する
+
+### GitHub Actions
+
+- main に push したタイミングで作動
+- デプロイ先は J-MOTTO でホスティングしている Web サーバー
+  - 詳細な接続先は Environment secrets に設定
+
+### 手動でデプロイする際の手順
+
+1. ビルド&静的 HTML のエクスポート
+   ```sh
+   yarn build
+   ```
+1. （out ディレクトリに静的バージョンのアプリが作成される）
+1. out ディレクトリへ移動
+   ```sh
+   cd out
+   ```
+1. FTP を使用し、out 配下のファイルを J-MOTTO でホスティングしている Web サーバーに転送
+
+### act を使用したテスト方法
+
+- テストの実行
+  ```sh
+  # ※ [-n (dryrun)] を外してしまうと実際に動作してしまい、本番環境に影響がでるので理解して実施すること
+  ./bin/act -n
+  ```
+- Secrets を設定
+  ```sh
+  # ※ [-n (dryrun)] を外してしまうと実際に動作してしまい、本番環境に影響がでるので理解して実施すること
+  ./bin/act -n -s FTP_SERVER=103.37.114.67 -s FTP_USER=sdk-co -s FTP_PASSWORD=?qO5ba94
+  ```
