@@ -25,7 +25,7 @@ export const Menus: React.FC<MenuProps> = ({ menus, currentPathName }: MenuProps
         {menus.map(({ name, path }) =>
             <div css={menuCss(currentPathName === '/' || path === currentPathName)}>
                 <Link href={path}>
-                    <a css={{ fontWeight: 'bold', fontSize: '1.2em', cursor: 'pointer' }}>{name}</a>
+                    <a css={css`font-weight: bold; cursor: pointer;}`}>{name}</a>
                 </Link>
             </div>
         )}
