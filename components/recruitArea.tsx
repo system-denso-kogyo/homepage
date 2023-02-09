@@ -17,20 +17,20 @@ export const RecruitArea: React.FC<RecruitProps> = ({ recruit, system, construct
         <h1 id="recruitArea"  css={{ textAlign: "center" }}>採用情報について</h1>
         {/* recruit */}
         <Row justify={"center"} css={{ marginTop: '40px' }}>
-            <Col sm={3}>
+            <Col xs={3.5} sm={6} md={4.5}>
                 <Image width={'100%'} src={recruit.imageName}></Image>
             </Col>
-            <Col sm={3} offset={offset}>
+            <Col sm={6} md={4.5} offset={offset}>
                 <Description {...recruit.description}></Description>
             </Col>
         </Row>
         <Row justify={"center"} css={{ marginTop: '80px' }}>
             {/* system */}
-            <Col sm={3}>
+            <Col xs={3.5} sm={6} md={4.5}>
                 <Article {...system}></Article>
             </Col>
             {/* construct */}
-            <Col sm={3} offset={offset}>
+            <Col sm={6} md={4.5} offset={offset}>
                 <Article {...construct}></Article>
             </Col>
         </Row>
