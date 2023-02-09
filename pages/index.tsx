@@ -99,12 +99,12 @@ export const Home = () =>
         }></AboutArea>
         <BusinessArea {...{
             system: {
-                imageName: SystemArticle.imageName,
-                description: {...SystemArticle}
+                imageName: SystemUnit.imageName,
+                description: {...SystemUnit}
             },
             construct: {
-                imageName: EquipmentArticle.imageName,
-                description: {...EquipmentArticle}
+                imageName: EquipmentUnit.imageName,
+                description: {...EquipmentUnit}
             },
         }
         }></BusinessArea>
